@@ -14,7 +14,7 @@ html{
     "content1 content2 content3"
     "footer footer footer";
     grid-gap: 0.2rem; /* gap between each element */
-    
+
 }
 
 nav{
@@ -45,4 +45,18 @@ main{
 footer{
     background-color: darkcyan;
     grid-area: footer;
+}
+
+@media only screen and (max-width:550px) {
+    .container{
+        grid-template-columns: 1fr; /* I only want there to be one colum so it fits on smaller devices */ 
+        grid-template-rows: 0.4fr 2.2fr 1.5fr 1.5fr 1.5fr 1fr; /* I want there to be 6 rows so that each of the element can fit on smaller screens */
+        grid-template-areas: /* Like before, I am marking each element up so I can assign to each element (but this time for smaller devices) */
+        "nav"
+        "main"
+        "content1"
+        "content2"
+        "content3"
+        "footer";
+    }
 }
